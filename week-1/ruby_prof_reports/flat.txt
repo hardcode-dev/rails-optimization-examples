@@ -1,0 +1,75 @@
+Measure Mode: wall_time
+Thread ID: 70229690605520
+Fiber ID: 70229708551560
+Total: 7.167830
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+ 89.06      6.384     6.384     0.000     0.000     2028   Array#select                   
+  4.95      7.127     0.355     0.000     6.772       10   Array#each                     
+  2.54      0.182     0.182     0.000     0.001    13254   Array#all?                     
+  0.79      0.138     0.057     0.000     0.081    22310   Array#map                      
+  0.44      0.067     0.031     0.000     0.036    11226   <Class::Date>#parse            
+  0.43      0.031     0.031     0.000     0.000    26509   String#split                   
+  0.22      0.016     0.016     0.000     0.000    22452   Regexp#match                   
+  0.19      0.025     0.014     0.000     0.011        1   JSON::Ext::Generator::GeneratorMethods::Hash#to_json 
+  0.17      0.024     0.012     0.000     0.012    11226   Object#parse_session           /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:27
+  0.12      0.009     0.009     0.000     0.000    33540   String#encode                  
+  0.11      0.011     0.008     0.000     0.003     4057   Array#sort                     
+  0.11      0.008     0.008     0.000     0.000    11226   String#gsub!                   
+  0.10      0.007     0.007     0.000     0.000    14196   Hash#merge                     
+  0.09      0.007     0.007     0.000     0.000    11226   MatchData#begin                
+  0.09      0.006     0.006     0.000     0.000    31014   String#upcase                  
+  0.08      0.007     0.006     0.000     0.002     2028   Class#new                      
+  0.07      0.005     0.005     0.000     0.000    11226   Date#iso8601                   
+  0.06      0.006     0.004     0.000     0.001     2028   Array#any?                     
+  0.05      0.004     0.004     0.000     0.000    22452   String#to_i                    
+  0.05      0.003     0.003     0.000     0.000    22904   Date#<=>                       
+  0.04      0.003     0.003     0.000     0.000    11226   String#[]=                     
+  0.03      0.004     0.002     0.000     0.002     2028   Object#parse_user              /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:17
+  0.03      6.386     0.002     0.000     6.384     2028   Object#select_session_for_user /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:46
+  0.03      0.002     0.002     0.000     0.000     2028   User#initialize                /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:11
+  0.03      0.002     0.002     0.000     0.000     2029   Array#join                     
+  0.02      0.002     0.002     0.000     0.000    16228   String#to_s                    
+  0.02      0.002     0.002     0.000     0.000    11226   Integer#div                    
+  0.02      0.001     0.001     0.000     0.000    11226   MatchData#end                  
+  0.01      0.001     0.001     0.000     0.000     4056   Integer#to_s                   
+  0.01      0.001     0.001     0.000     0.000     2030   Hash#keys                      
+  0.01      0.001     0.001     0.000     0.000        1   Array#uniq                     
+  0.01      0.001     0.001     0.000     0.000        1   <Class::IO>#write              
+  0.01      0.000     0.000     0.000     0.000     2028   Array#reverse                  
+  0.01      0.000     0.000     0.000     0.000        1   <Class::IO>#read               
+  0.01      0.000     0.000     0.000     0.000     2028   Array#max                      
+  0.00      0.000     0.000     0.000     0.000     2028   Array#sum                      
+  0.00      0.000     0.000     0.000     0.000     2031   Array#count                    
+  0.00      7.168     0.000     0.000     7.168        1   Object#work                    /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:63
+  0.00      0.000     0.000     0.000     0.000        2   IO#write                       
+  0.00      7.168     0.000     0.000     7.168        1   [global]#                      12-ruby-prof-flat.rb:10
+  0.00      0.198     0.000     0.000     0.198        7   Object#collect_stats_from_users /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:38
+  0.00      0.000     0.000     0.000     0.000        1   <Module::GC>#disable           
+  0.00      0.000     0.000     0.000     0.000        2   Kernel#puts                    
+  0.00      0.329     0.000     0.000     0.329        1   Object#parse_file_lines        /Users/spajic/thinknetica/flow-3/demos/week-1/work_method.rb:50
+  0.00      0.000     0.000     0.000     0.000        1   <Object::Object>#[]            
+  0.00      0.000     0.000     0.000     0.000        2   IO#puts                        
+  0.00      0.000     0.000     0.000     0.000        1   JSON::Ext::Generator::State#initialize_copy 
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#dup                     
+  0.00      0.000     0.000     0.000     0.000        1   Symbol#to_s                    
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#initialize_dup          
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.

@@ -10,4 +10,4 @@ tmux attach-session -t 3
 tmux a
 ```
 
-https://hackernoon.com/a-gentle-introduction-to-tmux-8d784c404340
+https://medium.com/hackernoon/a-gentle-introduction-to-tmux-8d784c404340

@@ -1,0 +1,25 @@
+# docker-compose.yml
+version: '2'
+services:
+  dockerhost:
+    image: qoomon/docker-host
+    cap_add: [ 'NET_ADMIN', 'NET_RAW' ]
+    mem_limit: 8M
+    restart: on-failure
+  prometheus:
+    depends_on: [ dockerhost ]
+    image: prom/prometheus:0.18.0
+    volumes:
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+        - '-config.file=/etc/prometheus/prometheus.yml'
+    ports:
+        - '9090:9090'
+  grafana:
+    image: grafana/grafana:3.0.0-beta7
+    environment:
+        - GF_SECURITY_ADMIN_PASSWORD=pass
+    depends_on:
+        - prometheus
+    ports:
+        - "3030:3000"

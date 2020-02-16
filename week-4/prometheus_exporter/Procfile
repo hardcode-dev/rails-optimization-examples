@@ -1,0 +1,1 @@
+prometheus_exporter: bundle exec prometheus_exporter -a prometheus/custom_collector.rb

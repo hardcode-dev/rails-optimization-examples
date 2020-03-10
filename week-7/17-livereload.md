@@ -1,0 +1,3 @@
+- guard-livereload
+- launch guard
+- change top-bar.scss
